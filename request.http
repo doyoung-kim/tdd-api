@@ -1,0 +1,37 @@
+##########local########
+GET http://localhost:9320/api/boards?size=4
+###
+GET http://localhost:9320/api/boards/custom?size=3
+
+###
+GET http://localhost:9320/api/boards/search?search=test
+###
+GET http://localhost:9320/api/boards/5
+
+###
+POST  http://localhost:9320/api/boards
+Content-Type: application/json
+
+{  
+  "title": "test insert-1",
+  "contents": "test insert-1",
+  "writeId": "user1",
+  "writeName": "사용자1",
+  "writeDate": "2021-09-11 16:20:41"
+}
+
+###
+PUT http://localhost:9320/api/boards
+Content-Type: application/json
+
+{  
+  "num": 29,
+  "title": "clt-test-수정",
+  "contents": "clt-test-수정",
+  "modifyId": "user1",
+  "modifyName": "사용자1",
+  "modifyDate": "2021-09-11 16:20:41"
+}
+
+###
+DELETE http://localhost:9320/api/boards/29
